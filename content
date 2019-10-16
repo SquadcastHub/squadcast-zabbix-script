@@ -1,0 +1,8 @@
+name:{TRIGGER.NAME}
+id:{TRIGGER.ID}
+status:{TRIGGER.STATUS}
+hostname:{HOSTNAME}
+ip:{IPADDRESS}
+value:{TRIGGER.VALUE}
+event_id:{EVENT.ID}
+severity:{TRIGGER.SEVERITY}
