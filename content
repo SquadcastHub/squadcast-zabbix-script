@@ -6,3 +6,4 @@ ip:{IPADDRESS}
 value:{TRIGGER.VALUE}
 event_id:{EVENT.ID}
 severity:{TRIGGER.SEVERITY}
+url:{TRIGGER.URL}
