@@ -37,8 +37,11 @@ def post_to_url(url, payload):
     """Posts the formed payload as json to the passed url"""
     try:
         gcontext = ssl.SSLContext()
-        req = urllib.request.Request(url, data=bytes(json.dumps(payload), "utf-8"))
-        req.add_header("Content-Type", "application/json")
+        headers={
+        'User-Agent': 'squadcast',
+        "Content-Type": "application/json"
+        }
+        req = urllib.request.Request(url, data=bytes(json.dumps(payload),"utf-8"),headers=headers)
         resp = urllib.request.urlopen(req,context=gcontext)
         if resp.status > 299:
            logger.error("[sq-zabbix] Request failed with status code %s : %s" % (resp.status, resp.read()))
